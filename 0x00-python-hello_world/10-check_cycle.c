@@ -13,10 +13,14 @@ int check_cycle(listint_t *list)
 
 	check = list;
 	n = 0;
-	while (check->next != list)
+	while (check != NULL)
 	{
+		if (check->next == list)
+		{
+			n++;
+			break;
+		}
 		check = check->next;
-		n++;
 	}
 
 	if (n > 0)
