@@ -11,6 +11,9 @@ int check_cycle(listint_t *list)
 	listint_t *check;
 	unsigned int n;
 
+	if (list == NULL)
+		return (0);
+
 	check = list;
 	n = 0;
 	while (check != NULL)
