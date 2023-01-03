@@ -100,7 +100,7 @@ class Rectangle:
         else:
             return rect_1
 
-    @claissmethod
+    @classmethod
     def square(cls, size=0):
         """returns a new Rectangle instance with width == height == size
 
