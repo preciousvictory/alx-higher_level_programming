@@ -15,7 +15,8 @@ class Student:
 
     def to_json(self, attrs=None):
         '''method to_json
-        If attrs is a list of strings, only attribute names contained in this list must be retrieved.
+        If attrs is a list of strings, only attribute names contained in this
+        list must be retrieved.
             Otherwise, all attributes must be retrieved
         '''
         if type(attrs) == list and all(type(in_list) == str for in_list in attrs):
