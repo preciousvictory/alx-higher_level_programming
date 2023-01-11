@@ -19,8 +19,19 @@ class Student:
         list must be retrieved.
             Otherwise, all attributes must be retrieved
         '''
-        if type(attrs) == list and all(type(in_list) == str for in_list in attrs):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        if type(attrs) == list and \
+                all(type(in_list) == str for in_list in attrs):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        return self.__dict__
 
-        return self.__dict_
-    _
+    def reload_from_json(self, json):
+        """method reload_from_json
+        that replaces all attributes of the Student instance:
+        """
+        for key, value in json.items():
+            if key == 'first_name':
+                self.first_name = value
+            if key == 'last_name':
+                self.last_name = value
+            if key == 'age':
+                self.age = value
