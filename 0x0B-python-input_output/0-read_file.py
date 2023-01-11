@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-reads a text file 
+reads a text file
 """
 
 
