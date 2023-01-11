@@ -19,7 +19,8 @@ class Student:
         list must be retrieved.
             Otherwise, all attributes must be retrieved
         '''
-        if type(attrs) == list and \
-                all(type(in_list) == str for in_list in attrs):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+        if type(attrs) == list and all(type(in_list) == str for in_list in attrs):
+            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+
+        return self.__dict_
+    _
