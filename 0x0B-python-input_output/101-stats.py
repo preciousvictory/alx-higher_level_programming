@@ -17,10 +17,9 @@ def print_status():
     for input_ in sys.stdin:
         line = input_.split()
 
-        try:
-            status = line[-2]
-            size += int(line[-1])
-            status_code[status] += 1
+        status = line[-2]
+        size += int(line[-1])
+        status_code[status] += 1
 
         if count == 9:
             print("File size: {}".format(size))
