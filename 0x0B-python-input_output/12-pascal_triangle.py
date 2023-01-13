@@ -20,7 +20,7 @@ def pascal_triangle(n):
         nth_list.append(1)
         for j in range(1, i):
             nth_list.append(pas_tri[i - 1][j - 1] + pas_tri[i - 1][j])
-        
+
         if i != 0:
             nth_list.append(1)
 
