@@ -15,9 +15,10 @@ def append_after(filename="", search_string="", new_string=""):
         position = []
         for line in file_:
             i = 0
-            for l in line:
-                if l == search_string[0]:
-                    if line[i:i + len(search_string)] == search_string[0:len(search_string)]:
+            for let in line:
+                if let == search_string[0]:
+                    if line[i:i + len(search_string)]\
+                            == search_string[0:len(search_string)]:
                         position.append(n)
                 i += 1
             n += 1
