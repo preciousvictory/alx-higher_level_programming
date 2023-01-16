@@ -103,7 +103,7 @@ class Rectangle(Base):
         overriding the __str__ method so that it returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return '[Rectangle] {} {}/{} - \
+        return '[Rectangle] ({}) {}/{} - \
                 {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args,  **kwargs):
