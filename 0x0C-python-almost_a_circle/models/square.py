@@ -58,10 +58,6 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """
-        public method  that returns the dictionary representation of a
-        Rectangle
-        [Rectangle] (1) 1/9 - 10/2
-        {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        public method that returns the dictionary representation of a Square
         """
-        return "\{'x': {}, 'y': {}, 'id': {}, 'height': {},'width': {}\
-                ".format(self.x, self.y, self.id, self.size, self.size)
+        return self.__dict__

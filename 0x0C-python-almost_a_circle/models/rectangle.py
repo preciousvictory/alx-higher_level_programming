@@ -32,7 +32,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.validation('height', value)
+        self.validation("height", value)
         self.__height = value
 
     @property
@@ -41,7 +41,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.validation('x', value)
+        self.validation("x", value)
         self.__x = value
 
     @property
@@ -50,7 +50,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.validation('y', value)
+        self.validation("y", value)
         self.__y = value
 
     @staticmethod
@@ -70,10 +70,10 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(att))
-        if att == 'x' or att == 'y':
+        if att == "x" or att == "y":
             if value < 0:
                 raise ValueError("{} must be >= 0".format(att))
-        if att == 'width' or att == 'height':
+        if att == "width" or att == "height":
             if value <= 0:
                 raise ValueError("{} numst be > 0".format(att))
 
@@ -93,9 +93,9 @@ class Rectangle(Base):
             print()
         for h in range(self.height):
             for x_ in range(self.x):
-                print(' ', end='')
+                print(" ", end='')
             for w in range(self.width):
-                print('#', end='')
+                print("#", end='')
             print()
 
     def __str__(self):
@@ -103,8 +103,8 @@ class Rectangle(Base):
         overriding the __str__ method so that it returns
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """
-        return '[Rectangle] ({}) {}/{} - \
-                {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - \
+                {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args,  **kwargs):
         """
@@ -129,3 +129,12 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        """
+        public method  that returns the dictionary representation of a
+        Rectangle
+        [Rectangle] (1) 1/9 - 10/2
+        {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        """
+        return f"{'x': {self.x}}"
