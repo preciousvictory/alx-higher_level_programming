@@ -68,12 +68,12 @@ class Rectangle(Base):
             message: <name of the attribute> must be >= 0.
             Example: x must be >= 0
         """
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(att))
         if att == "x" or att == "y":
             if value < 0:
                 raise ValueError("{} must be >= 0".format(att))
-        if att == "width" or att == "height":
+        elif att == "width" or att == "height":
             if value <= 0:
                 raise ValueError("{} numst be > 0".format(att))
 
