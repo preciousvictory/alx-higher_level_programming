@@ -122,7 +122,7 @@ class TestRectangle(unittest.TestCase):
             r3.display()
             self.assertEqual(f_out.getvalue(), a)
 
-    def test_str__(self):
+    def test___str__(self):
         """Test __str__ method"""
         r1 = Rectangle(4, 6, 2, 1, 12)
         p = "[Rectangle] (12) 2/1 - 4/6\n"
