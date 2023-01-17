@@ -40,7 +40,7 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         text = []
 
-        if  list_objs is not None:
+        if list_objs is not None:
             for r in list_objs:
                 r = r.to_dictionary()
                 json_dict = json.loads(cls.to_json_string(r))
