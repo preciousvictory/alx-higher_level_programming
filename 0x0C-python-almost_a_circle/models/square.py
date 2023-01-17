@@ -29,8 +29,8 @@ class Square(Rectangle):
         """ overloading __str__ method should return [Square] (<id>) <x>/<y>
         - <size> width or height
         """
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x,
-                                                 self.y, self.width)
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id,
+                                             self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """ public method
