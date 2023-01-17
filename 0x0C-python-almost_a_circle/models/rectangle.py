@@ -75,7 +75,7 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(att))
         elif att == "width" or att == "height":
             if value <= 0:
-                raise ValueError("{} numst be > 0".format(att))
+                raise ValueError("{} must be > 0".format(att))
 
     def area(self):
         """
