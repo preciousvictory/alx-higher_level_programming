@@ -53,7 +53,8 @@ class Base:
         """
         static method  that returns the list of the JSON string
         representation json_string:
-        """        con = []
+        """
+        con = []
         if json_string is None:
             return con
 
