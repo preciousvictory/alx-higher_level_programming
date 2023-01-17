@@ -84,8 +84,11 @@ class Base:
          class method   that returns a list of instances:
          <Class name>.json
         """
-        with open("{}.json".format(cls.__name__), encoding="utf-8") as f:
-            con = cls.from_json_string(f.read())
+        try:
+            with open("{}.json".format(cls.__name__), encoding="utf-8") as f:
+                con = cls.from_json_string(f.read())
+        except:
+            return []
 
         instances = []
         for instance in con:
