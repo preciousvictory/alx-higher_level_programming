@@ -137,4 +137,10 @@ class Rectangle(Base):
         [Rectangle] (1) 1/9 - 10/2
         {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
         """
-        return f"{'x': {self.x}}"
+        return {
+                "id": self.id,
+                "width": self.widdth,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }

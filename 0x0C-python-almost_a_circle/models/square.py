@@ -22,7 +22,6 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        self.validation('width', value)
         self.width = value
         self.height = value
 
@@ -30,8 +29,8 @@ class Square(Rectangle):
         """ overloading __str__ method should return [Square] (<id>) <x>/<y>
         - <size> width or height
         """
-        return '[Square] ({}) {}/{} - {}\
-                '.format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
 
     def update(self, *args, **kwargs):
         """ public method
@@ -59,5 +58,11 @@ class Square(Rectangle):
     def to_dictionary(self):
         """
         public method that returns the dictionary representation of a Square
+        {'id': 1, 'x': 2, 'size': 10, 'y': 1}
         """
-        return self.__dict__
+        return {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y
+                }
