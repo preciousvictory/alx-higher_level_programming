@@ -6,10 +6,14 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """Test class - Rectangle"""
+
     def setUp(self):
+        """Imports module, instantiates class"""
         pass
 
     def tearDown(self):
+        """Cleans up after each test_method."""
         pass
 
     def test_validation(self):
