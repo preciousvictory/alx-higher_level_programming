@@ -2,5 +2,5 @@
 SELECT cities.id, cities.name, states.name
   FROM cities
        LEFT JOIN states
-       On cities.state_id = states.id;
+       On cities.state_id = states.id
        ORDER BY cities.id;
