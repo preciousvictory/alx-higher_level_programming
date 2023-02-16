@@ -71,6 +71,9 @@ class TestBase(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertTrue(len(f.read()) == 77)
 
+        s = Square(1)
+        Square.save_to_file(s1)
+
     def test_from_json_string(self):
         """Test from_json_string"""
         list_input = [

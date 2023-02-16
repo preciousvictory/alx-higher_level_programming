@@ -98,7 +98,7 @@ class Solution:
             c += 1
         return board
     
-    def valid_queen(self, board):
+    def valid_queen(self, board, l):
         """if postion is valid it give the value 'Q' to that positon
 
         Args:
@@ -110,7 +110,7 @@ class Solution:
         r = 0
         position = []
         for rol in board:
-            c = 0
+            c = 1 
             pos = []
             for col in rol:
                 if board[r][c] != '-' and board[r][c] != 'Q':
@@ -118,6 +118,8 @@ class Solution:
                     pos.append(r)
                     pos.append(c)
                     board = self.del_invalid(board, r, c)
+                    if c >= len(board):
+                        break
                 c += 1
             position.append(pos)
             r += 1
@@ -145,7 +147,7 @@ if __name__ == "__main__":
     sol = Solution(N)
 
     board = sol.board_()
-    board, position = sol.valid_queen(board)
+    board, position = sol.valid_queen(board, 1)
     for i in board: print(i)
 
     print(position)
