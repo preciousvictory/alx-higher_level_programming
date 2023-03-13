@@ -5,12 +5,12 @@ function factorial (number) {
     return (1);
   } else {
     return (factorial(number - 1) * number);
- }
+  }
 }
 
 if (num) {
   const result = factorial(num);
   console.log(result);
 } else {
-	console.log('1');
+  console.log('1');
 }
