@@ -1,9 +1,8 @@
 #!/usr/bin/node
-let arguments = process.argv;
-
-if (arguments.length >= 3)
+const args = process.argv;
+if (args[2])
 {
-	console.log(arguments[2]);
+	console.log(args[2]);
 }
 else
 {
