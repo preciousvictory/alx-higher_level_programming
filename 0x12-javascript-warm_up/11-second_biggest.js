@@ -4,6 +4,7 @@ if (args.length <= 3) {
   console.log(0);
 } else {
   args.splice(0, 2);
-  args.sort().reverse();
+  args.sort((x, y) => x - y).reverse();
+	console.log(args);
   console.log(args[1]);
 }
