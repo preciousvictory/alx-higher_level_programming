@@ -1,7 +1,5 @@
 #!/usr/bin/node
 const list = require('./100-data').list;
-let i = 0;
-const new_list = list.map(x => x * (i++));
-
+const newList = list.map((x, index) => x * index);
 console.log(list);
-console.log(new_list);
+console.log(newList);
