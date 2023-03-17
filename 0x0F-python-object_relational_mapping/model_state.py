@@ -9,11 +9,11 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
-class States(Base):
+class State(Base):
     """
     class definition of a State that links to the MySQL table states
     """
     __tablename__ = 'states'
 
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, unique=True, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
