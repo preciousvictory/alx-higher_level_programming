@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).filter(State.name==state_n).first()
+    result = session.query(State).filter(State.name == state_n).first()
 
     if result is not None:
         print(f'{result.id}')
