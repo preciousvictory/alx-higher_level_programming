@@ -22,8 +22,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     result = session.query(State.name, City.id, City.name)\
-                           .join(City, City.state_id == State.id)\
-                           .order_by(City.id)
+                    .join(City, City.state_id == State.id)\
+                    .order_by(City.id)
 
     for row in result:
         print(f'{row[0]}: ({row[1]}) {row[2]}')
