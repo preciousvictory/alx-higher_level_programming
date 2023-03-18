@@ -20,10 +20,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name="Louisiana")
+    new_state = State()
+    new_state.name = 'Louisiana'
     session.add(new_state)
     session.commit()
 
-    q = session.query(State).filter(State.name == "Louisiana").first()
-
-    print(q)
+    print(new_state.id)
