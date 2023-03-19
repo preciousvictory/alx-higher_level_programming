@@ -2,18 +2,16 @@
 """
 contains the class definition of a City.
 """
+import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
-from sqlalchemy.orm import relationship
+from relationship_state import Base
 
 
 class City(Base):
     """
-     class definition of City that links to the MySQL table cities
+    A new table into de data base for city representation
     """
-    __tablename__ = 'cities'
-
-    id = Column(Integer, unique=True,
-                autoincrement=True, primary_key=True, nullable=False)
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
