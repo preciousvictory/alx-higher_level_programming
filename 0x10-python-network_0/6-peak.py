@@ -21,6 +21,6 @@ def find_peak(list_):
         val = list_[i]
         if i > 0 and i < len_ - 1 and list_[i - 1] <= val\
                 and list_[i + 1] <= val:
-            peak.append(val)
-
+                    peak.append(val)
     return max(peak)
+        
