@@ -5,4 +5,7 @@ of the response."""
 
 
 if __name__ == "__main__":
+    import urllib.request
+    import sys
 
+    g
