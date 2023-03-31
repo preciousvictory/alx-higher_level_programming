@@ -24,4 +24,4 @@ def find_peak(list_):
             peak.append(val)
     if len(peak) > 0:
         return max(peak)
-    return "OK"
+    return 'OK'
