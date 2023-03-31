@@ -20,7 +20,8 @@ def find_peak(list_):
     for i in range(0, len_):
         val = list_[i]
         if i > 0 and i < len_ - 1 and list_[i - 1] <= val\
-        and list_[i + 1] <= val:
+                and list_[i + 1] <= val:
             peak.append(val)
     if len(peak) > 0:
         return max(peak)
+    return "Ok"
