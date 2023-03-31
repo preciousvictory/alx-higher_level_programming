@@ -15,9 +15,11 @@ def find_peak(list_):
         elif list_[1] >= list_[0]:
             return list_[1]
 
-    for i in range(l):
-        val = 0
-        if list_[i - 1] <= val and list_[i + 1] <= val:
-            if val < list_[i]:
-                val = list_[i]
-    return val
+    peak = []
+    for i in range(0, l):
+        val = list_[i]
+        if i > 0 and i < l - 1 and list_[i - 1] <= val and list_[i + 1] <= val:
+            peak.append(val)
+            print(val)
+
+    return max(peak)
