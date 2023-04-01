@@ -6,10 +6,7 @@ import sys
 
 
 if __name__ == '__main__':
-    if sys.arv[1]:
-        let = sys.argv[1]
-    else:
-        let = ""
+    let = "" if len(sys.argv) == 1 else sys.argv[1]
 
     payload = {"q": let}
     r = requests.post("http://0.0.0.0:5000/search_user", data=payload)

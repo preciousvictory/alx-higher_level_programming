@@ -10,5 +10,5 @@ if __name__ == '__main__':
     user = sys.argv[1]
     passwd = sys.argv[2]
 
-    response = requests.get(, auth=HTTPBasicAuth((user, passwd)))
+    response = requests.get("https://api.github.com/user", auth=HTTPBasicAuth(user, passwd))
     print(reponse.json().get('id'))
