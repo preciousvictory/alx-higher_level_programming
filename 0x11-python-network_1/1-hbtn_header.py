@@ -8,4 +8,4 @@ if __name__ == "__main__":
     import urllib.request
     import sys
 
-    g
+    req = urllib.request.Request(sys.argv[1])
