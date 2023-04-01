@@ -7,12 +7,12 @@ import sys
 
 if __name__ == '__main__':
     if sys.arv[1]:
-        q = sys.argv[1]
+        let = sys.argv[1]
     else:
-        q = ""
+        let = ""
 
-    payload = {"q": q}
-    r = requests.post("http://0.0.0.0:5000/search_user", json=payload)
+    payload = {"q": let}
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
 
     try:
         res = r.json()
