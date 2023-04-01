@@ -5,11 +5,10 @@ response"""
 
 
 if __name__ == "__main__":
-    import sys
     import requests
+    import sys
 
     payload = {"email": sys.argv[2])
-    url = sys.argv[1]
 
-    r = requests.post(url, data=payload)
+    r = requests.post(sys.argv[1], data=payload)
     print(r.text)
