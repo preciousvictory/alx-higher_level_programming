@@ -3,16 +3,13 @@
 oldest) of the repository “rails” by the user “rails”"""
 from requests.auth import HTTPBasicAuth
 import requests
-import sys
+from sys import argv
 
 
 if __name__ == '__main__':
-    url = 'https://api.github.com/repos/{}/{}/commits'.format(sys.argv[2],sys.argv[1])
+    url = 'https://api.github.com/repos/{}/{}/commits'
+    .format(argv[2], argv[1])
     commit = requests.get(url).json()
-    i = 0
-    for res in commit:
-        if i < 10:
-            print('{}: '.format(res['sha'], res.get('commit').get('author').get('name')))
-        else:
-            break
-        i += 1
+    for res in commit[:10]:
+        print('{}: {}'
+              .format(res['sha'], res.get('commit').get('author').get('name')))
