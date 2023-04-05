@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-""" a Python script that  Please list 10 commits (from the most recent to
-oldest) of the repository by the user"""
+"""
+a Python script that  Please list 10 commits (from the most recent to
+oldest) of the repository by the user
+"""
 import requests
 from sys import argv
 
