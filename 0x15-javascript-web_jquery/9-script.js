@@ -1,5 +1,7 @@
-$.get('https://fourtonfish.com/hellosalut/?lang=fr', (data, textStatus) => {
-    if (textStatus === 'success') {
-      $('div#hello').text(data.hello);
+$.ajax({
+    type: 'GET',
+    url: 'https://fourtonfish.com/hellosalut/?lang=fr',
+    success: function (data) {
+      $('DIV#hello').append(data.hello);
     }
-});
+  });
