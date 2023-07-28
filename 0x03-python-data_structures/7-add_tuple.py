@@ -2,13 +2,14 @@
 def check(t):
     try:
         a = t[0]
-    except:
+    except IndexError:
         a = 0
     try:
         b = t[1]
-    except:
+    except IndexError:
         b = 0
     return (a, b)
+
 
 def add_tuple(tuple_a=(), tuple_b=()):
     """
