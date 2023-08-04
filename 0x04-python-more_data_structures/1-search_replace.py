@@ -6,5 +6,5 @@ def search_replace(my_list, search, replace):
     for i in new_list:
         if search == i:
             new_list[idx] = replace
-        idx +=1
+        idx += 1
     return new_list
