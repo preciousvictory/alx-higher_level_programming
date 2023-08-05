@@ -5,7 +5,7 @@ def weight_average(my_list=[]):
     ans = ((1 * 2) + (2 * 1) + (3 * 10) + (4 * 2)) / (2 + 1 + 10 + 2)"""
     if not my_list:
         return 0
-    
+
     scores = 0
     weight = 0
     for grade in my_list:
