@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Square that defines a square by: (based on 2-square.py)"""
+"""Square that defines a square by: (based on 3-square.py)"""
 
 
 class Square:
@@ -27,7 +27,7 @@ class Square:
         elif value < 0:
             raise ValueError('size must be >= 0')
         else:
-            self.__self = size
+            self.__size = value
 
     def area(self):
         """computes the area of the square
